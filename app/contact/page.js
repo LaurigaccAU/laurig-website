@@ -3,96 +3,39 @@ import SiteShell from '../../components/SiteShell'
 export default function ContactPage() {
   return (
     <SiteShell>
-      <div
-        className="page-content"
-        style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: '80px 48px',
-          border: 'none',
-          boxShadow: 'none',
-          background: 'transparent'
-        }}
-      >
-        <span className="kicker">Contact</span>
+      <section className="section">
+        <p className="kicker">Contact</p>
+        <h1 className="title">Drop me a message, I’d love to hear from you.</h1>
 
-        <h1
-          className="serif"
-          style={{
-            fontSize: '88px',
-            lineHeight: '.95',
-            margin: '10px 0 50px',
-            border: 'none'
-          }}
-        >
-          Let’s connect.
-        </h1>
+        <p className="text">
+          Whether you have a question, need support, or would like to connect through Balmain Accountants,
+          I’d be happy to hear from you.
+        </p>
 
-        <div
-          style={{
-            display: 'grid',
-            gap: '22px',
-            border: 'none'
-          }}
-        >
-          <div
-            className="card"
-            style={{
-              padding: '38px',
-              borderRadius: '14px',
-              background: '#fff',
-              border: '1px solid #ece3d8',
-              boxShadow: 'none'
-            }}
-          >
-            <h3 style={{ fontSize: '22px', marginBottom: '18px' }}>
-              Email
-            </h3>
+        <p className="signature">Laurig G.</p>
 
-            <p style={{ fontSize: '18px' }}>
-              laurig@balmainacc.com.au
-            </p>
+        <div className="grid-2" style={{ marginTop: 42 }}>
+          <div className="card">
+            <h3>Email</h3>
+            <p>laurig@balmainacc.com.au</p>
           </div>
 
-          <div
-            className="card"
-            style={{
-              padding: '38px',
-              borderRadius: '14px',
-              background: '#fff',
-              border: '1px solid #ece3d8',
-              boxShadow: 'none'
-            }}
-          >
-            <h3 style={{ fontSize: '22px', marginBottom: '18px' }}>
-              Phone
-            </h3>
-
-            <p style={{ fontSize: '18px' }}>
-              02 9555 88 00
-            </p>
+          <div className="card">
+            <h3>Phone</h3>
+            <p>02 9555 88 00</p>
           </div>
 
-          <div
-            className="card"
-            style={{
-              padding: '38px',
-              borderRadius: '14px',
-              background: '#fff',
-              border: '1px solid #ece3d8',
-              boxShadow: 'none'
-            }}
-          >
-            <h3 style={{ fontSize: '22px', marginBottom: '18px' }}>
-              LinkedIn
-            </h3>
+          <div className="card">
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/LaurigG</p>
+          </div>
 
-            <p style={{ fontSize: '18px' }}>
-              linkedin.com/in/LaurigG
-            </p>
+          <div className="card">
+            <h3>Office</h3>
+            <p>Suite 6, 2A Booth Street<br />Balmain NSW 2041</p>
           </div>
         </div>
-      </div>
+      </section>
     </SiteShell>
   )
 }
