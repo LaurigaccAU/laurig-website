@@ -1,4 +1,5 @@
-export const metadata = {
+import './globals.css'
+  export const metadata = {
   title: 'Laurig G. | Accountant',
   description: 'Professional accountant supporting bookkeeping, BAS/GST assistance, reconciliations and compliance support.',
 }
