@@ -1,5 +1,24 @@
+// FINAL MULTI-PAGE WEBSITE PACK
+// Use these files in GitHub.
+// Structure:
+// components/SiteShell.js
+// app/layout.js
+// app/page.js
+// app/about/page.js
+// app/services/page.js
+// app/experience/page.js
+// app/qualifications/page.js
+// app/contact/page.js
+// public/laurig-half-body.png
+// public/balmain-logo.jpg
+// public/syft-logo.png
+
+// ------------------------------------------------------------
+// components/SiteShell.js
+// ------------------------------------------------------------
+
 export default function SiteShell({ children }) {
-  const navLinks = [
+  const links = [
     ['Home', '/'],
     ['About', '/about'],
     ['Services', '/services'],
@@ -9,97 +28,88 @@ export default function SiteShell({ children }) {
   ]
 
   return (
-    <div style={{ background: '#f5f4ef', minHeight: '100vh', fontFamily: 'Arial, sans-serif', color: '#171717' }}>
+    <div className="site">
       <style>{`
         * { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { margin: 0; background: #f5f4ef; }
+        body { margin: 0; background: #f6f2ec; color: #171717; font-family: Arial, sans-serif; }
         a { color: inherit; text-decoration: none; }
-        .page-shell { max-width: 1320px; margin: 0 auto; padding: 24px; }
-        .frame {
-          background: #faf9f6;
-          border: 1px solid rgba(0,0,0,0.08);
-          overflow: hidden;
-          min-height: calc(100vh - 48px);
-        }
+        .site { min-height: 100vh; background: #f6f2ec; }
         .nav {
+          height: 82px;
           display: flex;
-          justify-content: space-between;
           align-items: center;
-          gap: 20px;
-          padding: 22px 32px;
-          border-bottom: 1px solid rgba(0,0,0,0.08);
-          background: rgba(250,249,246,0.96);
-          backdrop-filter: blur(8px);
+          justify-content: space-between;
+          padding: 0 56px;
+          background: #fffaf5;
+          border-bottom: 1px solid #e8ded2;
           position: sticky;
           top: 0;
           z-index: 20;
         }
-        .brand {
-          display: flex;
-          align-items: center;
-          gap: 14px;
-        }
-        .brand-mark {
-          width: 42px;
-          height: 42px;
-          border-radius: 50%;
-          border: 1px solid rgba(0,0,0,0.12);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: #e77c31;
-          font-weight: 700;
-          background: #fff;
-        }
         .brand-title {
+          font-family: Georgia, 'Times New Roman', serif;
+          font-size: 28px;
+          font-weight: 400;
           margin: 0;
-          font-size: 18px;
-          font-weight: 700;
+          letter-spacing: -0.03em;
         }
         .brand-sub {
-          margin: 3px 0 0;
-          color: #8a8a8a;
-          font-size: 11px;
-          letter-spacing: 0.12em;
+          margin: 2px 0 0;
+          font-size: 12px;
+          letter-spacing: .16em;
           text-transform: uppercase;
-        }
-        .nav-links {
-          display: flex;
-          gap: 22px;
-          flex-wrap: wrap;
-        }
-        .nav-links a {
-          font-size: 14px;
           color: #555;
         }
-        .nav-links a:hover {
-          color: #e77c31;
+        .links {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+          font-size: 15px;
         }
-        .page-content {
-          padding: 64px 64px 72px;
+        .links a:hover { color: #d84a10; }
+        .cta {
+          background: #d84a10;
+          color: white !important;
+          padding: 14px 22px;
+          border-radius: 6px;
+          font-weight: 700;
+        }
+        .page {
+          max-width: 1440px;
+          margin: 0 auto;
+          background: #fffaf5;
+          min-height: calc(100vh - 82px);
         }
         .kicker {
-          color: #e77c31;
+          color: #d84a10;
           text-transform: uppercase;
-          letter-spacing: 0.15em;
+          letter-spacing: .14em;
           font-size: 12px;
           font-weight: 700;
-          margin-bottom: 16px;
-          display: block;
+          margin: 0 0 14px;
         }
-        .title {
-          font-size: 64px;
+        .serif { font-family: Georgia, 'Times New Roman', serif; }
+        .signature {
+          font-family: 'Brush Script MT', cursive;
+          color: #d84a10;
+          font-size: 62px;
           line-height: 1;
-          letter-spacing: -0.05em;
-          font-weight: 500;
-          margin: 0 0 20px;
+          margin-top: 28px;
+        }
+        .content { padding: 72px 64px; }
+        .title {
+          font-family: Georgia, 'Times New Roman', serif;
+          font-size: 68px;
+          line-height: .98;
+          letter-spacing: -.05em;
+          font-weight: 400;
+          margin: 0 0 24px;
         }
         .text {
           font-size: 18px;
           line-height: 1.9;
-          color: #5f5f5f;
-          max-width: 860px;
+          color: #444;
+          max-width: 850px;
           margin: 0 0 20px;
         }
         .grid-2 {
@@ -113,125 +123,120 @@ export default function SiteShell({ children }) {
           gap: 18px;
         }
         .card {
-          background: #fff;
-          border: 1px solid rgba(0,0,0,0.08);
-          padding: 28px;
+          background: rgba(255,255,255,.72);
+          border: 1px solid #eadfd3;
+          padding: 30px;
+          border-radius: 8px;
         }
         .card h3 {
-          margin-top: 0;
-          font-size: 28px;
+          margin: 0 0 16px;
+          font-size: 26px;
           line-height: 1.15;
           font-weight: 500;
         }
         .card p, .card li {
-          color: #5f5f5f;
+          color: #444;
           font-size: 16px;
           line-height: 1.85;
         }
         .service-card {
-          min-height: 180px;
+          min-height: 170px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
         }
-        .service-num {
-          color: #b5b5b5;
-          font-size: 13px;
-        }
         .service-name {
-          font-size: 26px;
+          font-size: 22px;
           line-height: 1.2;
-          letter-spacing: -0.03em;
-          font-weight: 500;
+          font-weight: 700;
+        }
+        .service-copy {
+          font-size: 14px;
+          color: #666;
+          line-height: 1.75;
+          margin-top: 10px;
+        }
+        .software-logo {
+          height: 38px;
+          max-width: 150px;
+          object-fit: contain;
+          margin-bottom: 14px;
         }
         .footer {
-          border-top: 1px solid rgba(0,0,0,0.08);
-          padding: 24px 32px 18px;
-        }
-        .footer-row {
+          background: #191919;
+          color: white;
+          padding: 34px 56px;
           display: flex;
-          justify-content: space-between;
           align-items: center;
-          gap: 16px;
+          justify-content: space-between;
+          gap: 24px;
           flex-wrap: wrap;
         }
-        .footer-tags {
+        .footer small {
+          color: #aaa;
+          display: block;
+          margin-top: 8px;
+        }
+        .footer-logos {
           display: flex;
-          gap: 10px;
+          align-items: center;
+          gap: 28px;
           flex-wrap: wrap;
+        }
+        .footer-logos img {
+          max-height: 54px;
+          object-fit: contain;
         }
         .tag {
-          padding: 9px 14px;
-          border: 1px solid rgba(0,0,0,0.08);
+          border: 1px solid #d84a10;
           border-radius: 999px;
-          background: #fff;
+          padding: 9px 18px;
+          color: #fff;
           font-size: 12px;
-          color: #666;
-          letter-spacing: 0.08em;
+          letter-spacing: .08em;
           text-transform: uppercase;
         }
-        .footer-note {
-          color: #8a8a8a;
-          font-size: 13px;
-          margin-top: 14px;
-        }
-        .contact-list {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 18px;
-        }
-        @media (max-width: 1000px) {
-          .grid-2, .grid-3, .contact-list { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 760px) {
-          .nav { padding: 18px 20px; }
-          .nav-links { display: none; }
-          .page-content { padding: 34px 22px 40px; }
-          .title { font-size: 44px; }
+        @media(max-width: 950px) {
+          .links { display: none; }
+          .nav { padding: 0 24px; }
+          .content { padding: 42px 24px; }
+          .title { font-size: 46px; }
+          .grid-2, .grid-3 { grid-template-columns: 1fr; }
+          .footer { padding: 28px 24px; }
         }
       `}</style>
 
-      <div className="page-shell">
-        <div className="frame">
-          <nav className="nav">
-            <div className="brand">
-              <div className="brand-mark">LG</div>
-              <div>
-                <p className="brand-title">Laurig G.</p>
-                <p className="brand-sub">The Accountant</p>
-              </div>
-            </div>
+      <nav className="nav">
+        <a href="/">
+          <p className="brand-title">Laurig G.</p>
+          <p className="brand-sub">Accountant</p>
+        </a>
 
-            <div className="nav-links">
-              {navLinks.map(([label, href]) => (
-                <a key={href} href={href}>
-                  {label}
-                </a>
-              ))}
-            </div>
-          </nav>
-
-          {children}
-
-          <footer className="footer">
-            <div className="footer-row">
-              <div>
-                <p className="brand-title" style={{ margin: 0 }}>Laurig G. · The Accountant</p>
-                <p className="brand-sub">Balmain-inspired minimal style</p>
-              </div>
-              <div className="footer-tags">
-                <span className="tag">IPA Associate</span>
-                <span className="tag">IFA Associate</span>
-                <span className="tag">NTAA</span>
-                <span className="tag">SYFT Adviser</span>
-              </div>
-            </div>
-            <div className="footer-note">
-              Liability limited by a scheme approved under Professional Standards Legislation.
-            </div>
-          </footer>
+        <div className="links">
+          {links.map(([label, href]) => (
+            <a key={href} href={href}>{label}</a>
+          ))}
+          <a className="cta" href="/contact">Drop a message →</a>
         </div>
-      </div>
+      </nav>
+
+      <main className="page">{children}</main>
+
+      <footer className="footer">
+        <div>
+          <strong>Laurig G. · Accountant</strong>
+          <small>Proud member of the Balmain Accountants team</small>
+          <small>Liability limited by a scheme approved under Professional Standards Legislation.</small>
+        </div>
+
+        <div className="footer-logos">
+          <img src="/balmain-logo.jpg" alt="Balmain Accountants" />
+          <img src="/syft-logo.png" alt="SYFT Adviser" />
+          <span className="tag">IPA Associate</span>
+          <span className="tag">IFA Associate</span>
+          <span className="tag">NTAA</span>
+        </div>
+      </footer>
     </div>
   )
 }
