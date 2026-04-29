@@ -12,24 +12,23 @@ const services = [
 export default function ServicesPage() {
   return (
     <SiteShell>
-      <div className="page-content">
-        <span className="kicker">Services</span>
+      <section className="section">
+        <p className="kicker">Services</p>
         <h1 className="title">Practical support across the accounting workflow.</h1>
+
         <p className="text">
           Reliable help for the essential accounting and compliance work that keeps businesses organised.
         </p>
 
-        <div className="grid-3" style={{ marginTop: 30 }}>
-          {services.map((service, index) => (
-            <div className="card service-card" key={service}>
-                       <div>
-                <div className="service-name">{service}</div>
-                <div className="service-copy">Professional, responsive and detail-focused support.</div>
-              </div>
+        <div className="grid-3" style={{ marginTop: 36 }}>
+          {services.map((service) => (
+            <div className="card" key={service}>
+              <h3>{service}</h3>
+              <p>Professional, responsive and detail-focused support.</p>
             </div>
           ))}
         </div>
-      </div>
+      </section>
     </SiteShell>
   )
 }
