@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Laurig G. | Accountant',
-  description: 'Accounting, tax and business support',
+  description: 'Professional accountant supporting bookkeeping, BAS/GST assistance, reconciliations and compliance support.',
 }
 
 export default function RootLayout({ children }) {
