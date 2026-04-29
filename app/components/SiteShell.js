@@ -12,23 +12,10 @@ export default function SiteShell({ children }) {
     <div className="site">
       <style>{`
         * { box-sizing: border-box; }
+        body { margin: 0; background: #fffaf5; color: #171717; font-family: Arial, sans-serif; }
+        a { color: inherit; text-decoration: none; }
 
-        body {
-          margin: 0;
-          background: #f6f2ec;
-          color: #171717;
-          font-family: Arial, sans-serif;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .site {
-          min-height: 100vh;
-          background: #f6f2ec;
-        }
+        .site { min-height: 100vh; background: #fffaf5; }
 
         .nav {
           height: 86px;
@@ -42,16 +29,11 @@ export default function SiteShell({ children }) {
           z-index: 20;
         }
 
-        .brand {
-          display: flex;
-          flex-direction: column;
-        }
-
         .brand-title {
-          font-size: 21px;
-          font-weight: 700;
-          margin: 0;
           font-family: Georgia, serif;
+          font-size: 26px;
+          font-weight: 400;
+          margin: 0;
         }
 
         .brand-sub {
@@ -62,12 +44,7 @@ export default function SiteShell({ children }) {
           color: #555;
         }
 
-        .links {
-          display: flex;
-          gap: 34px;
-          align-items: center;
-          font-size: 15px;
-        }
+        .links { display: flex; gap: 34px; align-items: center; font-size: 15px; }
 
         .cta {
           background: #d84a10;
@@ -77,16 +54,7 @@ export default function SiteShell({ children }) {
           font-weight: 700;
         }
 
-        .page {
-          max-width: 1440px;
-          margin: 0 auto;
-          background: #fffaf5;
-          min-height: calc(100vh - 86px);
-        }
-
-        .content {
-          padding: 72px 64px;
-        }
+        .page { background: #fffaf5; min-height: calc(100vh - 86px); }
 
         .kicker {
           color: #d84a10;
@@ -96,44 +64,20 @@ export default function SiteShell({ children }) {
           font-weight: 700;
         }
 
-        .title {
-          font-size: 70px;
-          line-height: .98;
-          letter-spacing: -.05em;
-          font-weight: 400;
-          margin: 16px 0 24px;
-          font-family: Georgia, serif;
+        .serif { font-family: Georgia, serif; }
+
+        .signature {
+          font-family: "Brush Script MT", cursive;
+          color: #d84a10;
+          font-size: 54px;
+          margin: 0;
         }
 
         .text {
           font-size: 18px;
           line-height: 1.9;
           color: #444;
-          max-width: 850px;
-        }
-
-        .serif {
-          font-family: Georgia, serif;
-        }
-
-        .signature {
-          font-family: "Brush Script MT", cursive;
-          color: #d84a10;
-          font-size: 54px;
-          margin-top: 24px;
-        }
-
-        .grid-3 {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 22px;
-        }
-
-        .card {
-          background: white;
-          border-radius: 10px;
-          padding: 34px;
-          border: 1px solid #eee3d8;
+          max-width: 650px;
         }
 
         .footer {
@@ -142,13 +86,11 @@ export default function SiteShell({ children }) {
           justify-content: space-between;
           gap: 24px;
           flex-wrap: wrap;
+          background: #191919;
+          color: white;
         }
 
-        .footer small {
-          color: #888;
-          display: block;
-          margin-top: 8px;
-        }
+        .footer small { color: #aaa; display: block; margin-top: 8px; }
 
         .footer-logos {
           display: flex;
@@ -157,51 +99,27 @@ export default function SiteShell({ children }) {
           flex-wrap: wrap;
         }
 
-        .footer-logos img {
-          max-height: 52px;
-          object-fit: contain;
-          background: transparent;
-        }
+        .footer-logos img { max-height: 52px; object-fit: contain; }
 
         .tag {
           border: 1px solid #d84a10;
           border-radius: 999px;
           padding: 9px 18px;
-          color: #d84a10;
+          color: #fff;
           font-size: 12px;
           letter-spacing: .08em;
           text-transform: uppercase;
         }
 
         @media(max-width: 900px) {
-          .links {
-            display: none;
-          }
-
-          .nav {
-            padding: 0 24px;
-          }
-
-          .content {
-            padding: 42px 24px;
-          }
-
-          .title {
-            font-size: 46px;
-          }
-
-          .footer {
-            padding: 28px 24px;
-          }
-
-          .grid-3 {
-            grid-template-columns: 1fr;
-          }
+          .links { display: none; }
+          .nav { padding: 0 24px; }
+          .footer { padding: 28px 24px; }
         }
       `}</style>
 
       <nav className="nav">
-        <a href="/" className="brand">
+        <a href="/">
           <p className="brand-title">Laurig G.</p>
           <p className="brand-sub">ACCOUNTANT</p>
         </a>
@@ -210,10 +128,7 @@ export default function SiteShell({ children }) {
           {links.map(([label, href]) => (
             <a key={href} href={href}>{label}</a>
           ))}
-
-          <a className="cta" href="/contact">
-            Drop a message →
-          </a>
+          <a className="cta" href="/contact">Drop a message →</a>
         </div>
       </nav>
 
@@ -221,17 +136,13 @@ export default function SiteShell({ children }) {
 
       <footer className="footer">
         <div>
-          <strong>Laurig G.</strong>
-
-          <small>
-            Liability limited by a scheme approved under Professional Standards Legislation.
-          </small>
+          <strong>Laurig G. · Accountant</strong>
+          <small>Liability limited by a scheme approved under Professional Standards Legislation.</small>
         </div>
 
         <div className="footer-logos">
           <img src="/balmain-logo.jpg" alt="Balmain Accountants" />
           <img src="/syft-logo.png" alt="SYFT Adviser" />
-
           <span className="tag">IPA Associate</span>
           <span className="tag">IFA Associate</span>
           <span className="tag">NTAA</span>
