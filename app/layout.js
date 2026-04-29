@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Laurig G. | The Accountant',
+  title: 'Laurig G. | Accountant',
   description: 'Accounting, tax and business support',
 }
 
