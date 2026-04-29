@@ -225,3 +225,22 @@ a {
     padding: 34px 28px !important;
   }
 }
+@media (max-width: 900px) {
+  .nav {
+    height: auto !important;
+    padding: 24px 28px !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
+  }
+
+  .links {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 14px 18px !important;
+    font-size: 14px !important;
+  }
+
+  .cta {
+    padding: 10px 14px !important;
+  }
+}
