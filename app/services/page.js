@@ -22,8 +22,7 @@ export default function ServicesPage() {
         <div className="grid-3" style={{ marginTop: 30 }}>
           {services.map((service, index) => (
             <div className="card service-card" key={service}>
-              <div className="service-num">0{index + 1}</div>
-              <div>
+                       <div>
                 <div className="service-name">{service}</div>
                 <div className="service-copy">Professional, responsive and detail-focused support.</div>
               </div>
