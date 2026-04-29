@@ -193,3 +193,35 @@ a {
     width: 78% !important;
   }
 }
+@media (max-width: 520px) {
+  section:first-of-type {
+    padding: 34px 28px 0 !important;
+  }
+
+  section:first-of-type h1 {
+    font-size: 58px !important;
+  }
+
+  section:first-of-type .text {
+    font-size: 18px !important;
+    line-height: 1.55 !important;
+  }
+
+  section:first-of-type img[alt="Laurig G."] {
+    width: 88% !important;
+    max-width: 360px !important;
+    margin-top: -20px !important;
+  }
+
+  section:first-of-type img[alt="Balmain Accountants"] {
+    height: 48px !important;
+  }
+
+  section:first-of-type img[alt="SYFT Adviser"] {
+    height: 58px !important;
+  }
+
+  .footer {
+    padding: 34px 28px !important;
+  }
+}
