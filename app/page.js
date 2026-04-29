@@ -5,20 +5,39 @@ export default function Home() {
     <SiteShell>
       <section
         style={{
+          minHeight: '720px',
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
-          minHeight: '720px',
+          alignItems: 'end',
           background: 'linear-gradient(90deg, #fffaf5 0%, #f3eadf 100%)',
+          padding: '70px 7vw 0',
         }}
       >
-        <div style={{ padding: '80px 64px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <p className="signature" style={{ fontSize: 52 }}>Hey,</p>
+        <div style={{ paddingBottom: '90px' }}>
+          <p className="signature" style={{ fontSize: 56, marginBottom: 8 }}>
+            Hey,
+          </p>
 
-          <h1 className="serif" style={{ fontSize: 86, lineHeight: 0.95, margin: '0 0 10px', fontWeight: 400 }}>
+          <h1
+            className="serif"
+            style={{
+              fontSize: 'clamp(70px, 7vw, 116px)',
+              lineHeight: '.88',
+              margin: 0,
+              fontWeight: 400,
+              letterSpacing: '-0.06em',
+            }}
+          >
             I’m Laurig.
           </h1>
 
-          <h2 style={{ color: '#d84a10', fontSize: 36, margin: '0 0 24px' }}>
+          <h2
+            style={{
+              color: '#d84a10',
+              fontSize: 38,
+              margin: '18px 0 28px',
+            }}
+          >
             Accountant
           </h2>
 
@@ -27,17 +46,63 @@ export default function Home() {
             bookkeeping, BAS/GST assistance, reconciliations, payroll support and compliance processes.
           </p>
 
-          <div style={{ display: 'flex', gap: 28, alignItems: 'center', marginTop: 34 }}>
-            <img src="/balmain-logo.jpg" alt="Balmain Accountants" style={{ height: 70, objectFit: 'contain' }} />
-            <img src="/syft-logo.png" alt="SYFT Adviser" style={{ height: 70, objectFit: 'contain' }} />
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: 28,
+              marginTop: 38,
+              flexWrap: 'wrap',
+            }}
+          >
+            <img
+              src="/balmain-logo.png"
+              alt="Balmain Accountants"
+              style={{
+                height: 72,
+                width: 'auto',
+                objectFit: 'contain',
+              }}
+            />
+
+            <div
+              style={{
+                height: 54,
+                width: 1,
+                background: '#dccfc2',
+              }}
+            />
+
+            <img
+              src="/syft-logo.png"
+              alt="SYFT Adviser"
+              style={{
+                height: 76,
+                width: 'auto',
+                objectFit: 'contain',
+              }}
+            />
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'end', justifyContent: 'center', overflow: 'hidden' }}>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'end',
+            justifyContent: 'center',
+            minHeight: '650px',
+            overflow: 'hidden',
+          }}
+        >
           <img
             src="/laurig-half-body.png"
             alt="Laurig G."
-            style={{ width: '70%', maxWidth: 460, display: 'block', objectFit: 'contain' }}
+            style={{
+              width: '78%',
+              maxWidth: 560,
+              display: 'block',
+              objectFit: 'contain',
+            }}
           />
         </div>
       </section>
