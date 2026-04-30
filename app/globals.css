@@ -244,3 +244,35 @@ a {
     padding: 10px 14px !important;
   }
 }
+/* HERO SIGNATURE */
+
+.hero-signature {
+  width: 140px;
+  margin-bottom: 20px;
+  opacity: 0.9;
+  filter: brightness(0.75);
+}
+
+/* CONTACT SIGNATURE */
+
+.contact-signature-img {
+  width: 170px;
+  margin-top: 30px;
+  opacity: 0.9;
+  filter: brightness(0.75);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .hero-signature {
+    width: 110px;
+    margin-bottom: 16px;
+  }
+
+  .contact-signature-img {
+    width: 140px;
+  }
+
+}
