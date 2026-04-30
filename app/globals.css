@@ -9,6 +9,11 @@ body {
   background: #f6f1eb;
   color: #111;
   font-family: Georgia, serif;
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
 }
 
 a {
@@ -16,7 +21,16 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* GLOBAL LAYOUT */
+
 .section {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 120px 40px;
@@ -48,6 +62,8 @@ a {
   margin-bottom: 28px;
 }
 
+/* GRIDS */
+
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -59,6 +75,8 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
 }
+
+/* CARDS */
 
 .card {
   background: white;
@@ -79,6 +97,8 @@ a {
   color: #333;
 }
 
+/* SIGNATURE */
+
 .signature {
   color: #e35b0f;
   font-size: 52px;
@@ -86,86 +106,99 @@ a {
   font-family: cursive;
 }
 
+/* HERO SIGNATURE IMAGE */
+
+.hero-signature {
+  width: 140px;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+/* CONTACT SIGNATURE IMAGE */
+
+.contact-signature-img {
+  width: 170px;
+  margin-top: 30px;
+  opacity: 0.95;
+}
+
+/* NAVIGATION */
+
+.nav {
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.cta {
+  transition: 0.25s ease;
+}
+
+.cta:hover {
+  opacity: 0.9;
+}
+
+/* TABLET */
+
 @media (max-width: 900px) {
+
   .grid-2,
   .grid-3 {
     grid-template-columns: 1fr;
   }
 
   .section {
-    padding: 80px 24px;
+    padding: 80px 28px;
   }
 
   .title {
     font-size: 64px;
-    line-height: 1.05;
+    line-height: 1.02;
     letter-spacing: -2px;
   }
 
   .text {
     font-size: 18px;
     line-height: 1.7;
+    max-width: 100%;
   }
 
   .card {
     padding: 28px;
   }
-}
 
-@media (max-width: 640px) {
-  .title {
-    font-size: 48px;
-  }
+  /* NAV */
 
-  .section {
-    padding: 70px 20px;
-  }
-
-  .card h3 {
-    font-size: 24px;
+  .nav {
+    height: auto !important;
+    padding: 22px 28px !important;
+    align-items: flex-start !important;
+    gap: 18px !important;
   }
 
-  .card p,
-  .card li {
-    font-size: 16px;
-  }
-}
-@media (max-width: 900px) {
-  section {
-    grid-template-columns: 1fr !important;
-    padding: 48px 28px 0 !important;
-    min-height: auto !important;
+  .links {
+    flex-wrap: wrap !important;
+    gap: 14px 18px !important;
+    font-size: 14px !important;
   }
 
-  section > div {
-    min-height: auto !important;
-    padding-bottom: 40px !important;
+  .cta {
+    padding: 10px 14px !important;
   }
 
-  h1 {
-    font-size: 58px !important;
-    line-height: 0.95 !important;
-  }
-
-  h2 {
-    font-size: 34px !important;
-  }
-
-  .signature {
-    font-size: 48px !important;
-  }
-
-  .text {
-    font-size: 18px !important;
-    line-height: 1.7 !important;
-    max-width: 100% !important;
-  }
+  /* HERO IMAGE */
 
   img[alt="Laurig G."] {
     width: 72% !important;
     max-width: 320px !important;
-    margin-top: 20px;
+    margin: 20px auto 0 !important;
   }
+
+  /* LOGOS */
 
   img[alt="Balmain Accountants"] {
     height: 54px !important;
@@ -175,96 +208,7 @@ a {
     height: 62px !important;
   }
 
-  .footer {
-    margin-top: 0 !important;
-  }
-}
-
-@media (max-width: 520px) {
-  section {
-    padding: 38px 22px 0 !important;
-  }
-
-  h1 {
-    font-size: 50px !important;
-  }
-
-  img[alt="Laurig G."] {
-    width: 78% !important;
-  }
-}
-@media (max-width: 520px) {
-  section:first-of-type {
-    padding: 34px 28px 0 !important;
-  }
-
-  section:first-of-type h1 {
-    font-size: 58px !important;
-  }
-
-  section:first-of-type .text {
-    font-size: 18px !important;
-    line-height: 1.55 !important;
-  }
-
-  section:first-of-type img[alt="Laurig G."] {
-    width: 88% !important;
-    max-width: 360px !important;
-    margin-top: -20px !important;
-  }
-
-  section:first-of-type img[alt="Balmain Accountants"] {
-    height: 48px !important;
-  }
-
-  section:first-of-type img[alt="SYFT Adviser"] {
-    height: 58px !important;
-  }
-
-  .footer {
-    padding: 34px 28px !important;
-  }
-}
-@media (max-width: 900px) {
-  .nav {
-    height: auto !important;
-    padding: 24px 28px !important;
-    align-items: flex-start !important;
-    gap: 18px !important;
-  }
-
-  .links {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 14px 18px !important;
-    font-size: 14px !important;
-  }
-
-  .cta {
-    padding: 10px 14px !important;
-  }
-}
-/* HERO SIGNATURE */
-
-.hero-signature {
-  width: 140px;
-  margin-bottom: 20px;
-  opacity: 0.9;
-  filter: brightness(0.75);
-}
-
-/* CONTACT SIGNATURE */
-
-.contact-signature-img {
-  width: 170px;
-  margin-top: 30px;
-  opacity: 0.9;
-  filter: brightness(0.75);
-}
-
-/* MOBILE */
-
-@media (max-width: 768px) {
+  /* SIGNATURES */
 
   .hero-signature {
     width: 110px;
@@ -275,4 +219,89 @@ a {
     width: 140px;
   }
 
+  .footer {
+    margin-top: 0 !important;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 640px) {
+
+  .section {
+    padding: 70px 22px;
+  }
+
+  .title {
+    font-size: 48px;
+    line-height: 1.05;
+  }
+
+  .text {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .card h3 {
+    font-size: 24px;
+  }
+
+  .card p,
+  .card li {
+    font-size: 16px;
+  }
+
+  /* HERO SECTION */
+
+  section:first-of-type {
+    padding-top: 34px !important;
+  }
+
+  section:first-of-type h1 {
+    font-size: 58px !important;
+    line-height: 0.95 !important;
+  }
+
+  section:first-of-type .text {
+    font-size: 18px !important;
+    line-height: 1.55 !important;
+  }
+
+  img[alt="Laurig G."] {
+    width: 88% !important;
+    max-width: 360px !important;
+    margin: 10px auto 0 !important;
+  }
+
+  /* LOGOS */
+
+  img[alt="Balmain Accountants"] {
+    height: 48px !important;
+  }
+
+  img[alt="SYFT Adviser"] {
+    height: 58px !important;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding: 34px 28px !important;
+  }
+
+  /* MOBILE NAV */
+
+  .links {
+    gap: 12px !important;
+    font-size: 13px !important;
+  }
+
+  .cta {
+    width: 100%;
+    text-align: center;
+  }
 }
