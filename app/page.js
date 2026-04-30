@@ -14,11 +14,7 @@ export default function Home() {
         }}
       >
         <div style={{ paddingBottom: '90px' }}>
-          <img
-        src="/signature.png"
-        alt="Laurig Signature"
-        className="hero-signature"
-        />
+         <p className="hero-hey">Hey,</p>
 
           <h1
             className="serif"
