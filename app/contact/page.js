@@ -12,7 +12,11 @@ export default function ContactPage() {
           I’d be happy to hear from you.
         </p>
 
-        <p className="signature">Laurig G.</p>
+       <img
+  src="/signature.png"
+  alt="Laurig Signature"
+  className="contact-signature-img"
+/>
 
         <div className="grid-2" style={{ marginTop: 42 }}>
           <div className="card">
