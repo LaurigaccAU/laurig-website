@@ -108,10 +108,13 @@ img {
 
 /* HERO SIGNATURE IMAGE */
 
-.hero-signature {
-  width: 140px;
-  margin-bottom: 20px;
-  opacity: 0.95;
+.hero-hey {
+  font-family: cursive;
+  font-size: 88px;
+  line-height: 1;
+  color: #e35b0f;
+  margin-bottom: 10px;
+  font-weight: 400;
 }
 
 /* CONTACT SIGNATURE IMAGE */
